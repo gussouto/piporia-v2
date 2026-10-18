@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre — Pipória</title>
+  <meta name="description" content="Conheça a Pipória: pipocas gourmet feitas com milho mushroom importado dos EUA, selecionadas uma a uma, em Uberlândia.">
+  <meta name="theme-color" content="#061230">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("piporia_theme"); } catch (e) {}
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body data-page="sobre">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="sec-night banner" aria-labelledby="sob-t">
+      <div class="banner-img" aria-hidden="true"><img src="img/banner-cardapio.jpg" alt=""></div>
+      <i class="spark" style="--s:28px;left:2%;top:34%"></i>
+      <div class="wrap">
+        <span class="eyebrow line">Nossa história</span>
+        <h1 id="sob-t">Sobre a <em>Pipória</em></h1>
+        <p>Pipocas gourmet no balde. A sua nova paixão intergaláctica.</p>
+      </div>
+      <div class="wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="sec-cream grain section" style="padding-bottom:clamp(130px,13vw,190px)">
+      <span class="deco-planet" style="right:4%;top:6%;--s:70px"><span data-i="planet"></span></span>
+      <div class="wave" style="--wave:var(--navy)" aria-hidden="true"></div>
+      <div class="wrap split">
+        <img src="img/sobre-mushroom.jpg" alt="Na palma da mão, uma pipoca comum ao lado da pipoca mushroom caramelizada usada na Pipória" loading="lazy">
+        <div>
+          <span class="eyebrow line">Você sabia?</span>
+          <h2>Pipoca não é <em style="color:var(--gold-text)">tudo igual</em>, e a gente prova.</h2>
+          <p>Deixamos a tradicional de lado para trazer diretamente dos EUA o legítimo <strong>milho Mushroom</strong>.</p>
+          <p>Enquanto a comum estoura em formato de “borboleta”, a Mushroom vira uma obra de arte redondinha, super crocante e perfeita para aguentar aquela calda caprichada de caramelo ou chocolate sem murchar.</p>
+          <p>Aqui na Pipória, além de usarmos o melhor milho, ainda fazemos a seleção uma a uma, para que você tenha a melhor experiência ao comer.</p>
+          <ul class="facts">
+            <li><span><strong>Milho mushroom importado</strong> e caramelização americana.</span></li>
+            <li><span><strong>Formato redondo</strong>, que segura a calda sem murchar.</span></li>
+            <li><span><strong>Seleção manual</strong>, pipoca por pipoca.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-night about-night section" aria-labelledby="emp-t">
+      <i class="spark" style="--s:24px;right:6%;top:10%"></i>
+      <i class="spark" style="--s:14px;left:4%;top:60%"></i>
+      <div class="wrap">
+        <span class="eyebrow line">A empresa</span>
+        <h2 class="sec-title" id="emp-t">Uma pipocaria de <em>outro mundo</em>, em Uberlândia</h2>
+        <p class="lead">A Pipória vende pipoca gourmet no balde, com o recheio que você escolher. Cada sabor leva o nome de um planeta, e dá para combinar até dois recheios no mesmo balde.</p>
+        <div class="values">
+          <div class="pillar"><div class="badge"><span data-i="bucket"></span></div><h3>Pipocas gourmet</h3><p>Sete clássicos, de Lua (leitinho) a Saturno (Nutella), em baldes de 500 ml e 1 L.</p></div>
+          <div class="pillar"><div class="badge"><span data-i="bottle"></span></div><h3>Açaí na garrafa e panqueca</h3><p>Além da pipoca, o cardápio tem açaí para levar na garrafa e panqueca com calda.</p></div>
+          <div class="pillar"><div class="badge"><span data-i="wa"></span></div><h3>Peça do seu jeito</h3><p>Monte o pedido no site e envie pelo WhatsApp. Retirada na loja ou entrega, você combina com a gente.</p></div>
+          <div class="pillar"><div class="badge"><span data-i="pin"></span></div><h3>Onde estamos</h3><p>Av. Solidariedade, 1230, Uberlândia - MG. Acompanhe as novidades no Instagram @piporia.gourmet.</p></div>
+        </div>
+      </div>
+      <div class="wave" style="--wave:var(--bg)" aria-hidden="true"></div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-t">
+      <div class="wrap">
+        <div class="small">ONDE TUDO VIRA</div>
+        <h2 id="cta-t">Experiência.</h2>
+        <p>Veja os sabores e escolha o seu primeiro balde.</p>
+        <a class="btn btn-navy" href="cardapio.html"><span data-i="wa"></span>Ver cardápio<span data-i="arrow"></span></a>
+      </div>
+      <div class="wave" style="--wave:var(--navy-deep)" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
