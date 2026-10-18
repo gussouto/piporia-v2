@@ -573,3 +573,14 @@ input::placeholder, textarea::placeholder { color: #8a8fa8; }
   .cart-line .det { font-size: .88rem; }
   .cat-title::before, .cat-title::after { display: none; }
 }
+
+/* ---------- Valores e números: fonte moderna, números alinhados ---------- */
+.total, .sum strong, .m-price strong, .cart-line .price, .qty output, .cart-count, .flavor em.pr, .hero-tag, .m-sizes {
+  font-family: var(--sans);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+.total { font-size: 1.85rem; font-weight: 700; letter-spacing: -.01em; }
+.sum strong { font-size: 1.85rem; font-weight: 700; letter-spacing: -.01em; }
+.m-price strong { font-size: 1.3rem; font-weight: 700; }
+h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
