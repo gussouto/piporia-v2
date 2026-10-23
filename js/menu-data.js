@@ -55,42 +55,42 @@ window.PIPORIA_MENU = {
     /* ---------------- PIPOCAS ---------------- */
     {
       id: "lua", ilustrativa: true, categoria: "pipoca", nome: "Lua", subtitulo: "Leitinho",
-      imagem: "img/sabores/lua.jpg",
+      imagem: "img/sabores/lua-v2.jpg",
       descricao: "Doce, suave e cremoso como a luz da lua.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#e7c98b", cor2: "#fff3d1", combinavel: true
     },
     {
       id: "jupiter", ilustrativa: true, categoria: "pipoca", nome: "Júpiter", subtitulo: "Creme de avelã",
-      imagem: "img/sabores/jupiter.jpg",
+      imagem: "img/sabores/jupiter-v2.jpg",
       descricao: "Intenso, envolvente e cheio de camadas de sabor.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#7a4a2a", cor2: "#c58a55", combinavel: true
     },
     {
       id: "netuno", ilustrativa: true, categoria: "pipoca", nome: "Netuno", subtitulo: "Cookies & Cream",
-      imagem: "img/sabores/netuno.jpg",
+      imagem: "img/sabores/netuno-v2.jpg",
       descricao: "A crocância dos cookies encontrando a suavidade do creme. Uma combinação que conquista qualquer galáxia.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#d9d2c6", cor2: "#3a3430", combinavel: true
     },
     {
       id: "marte", ilustrativa: true, categoria: "pipoca", nome: "Marte", subtitulo: "Bueno",
-      imagem: "img/sabores/marte.jpg",
+      imagem: "img/sabores/marte-v2.jpg",
       descricao: "Anéis de sabor envolvendo uma explosão de creme de avelã e chocolate. Um clássico que conquista toda a galáxia.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#b5832f", cor2: "#e6b560", combinavel: true
     },
     {
       id: "plutao", ilustrativa: true, categoria: "pipoca", nome: "Plutão", subtitulo: "Ovomaltine",
-      imagem: "img/sabores/plutao.jpg",
+      imagem: "img/sabores/plutao-v2.jpg",
       descricao: "A crocância inconfundível do Ovomaltine que transforma cada mordida em pura nostalgia e prazer.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#6b4226", cor2: "#b07a45", combinavel: true
     },
     {
       id: "saturno", ilustrativa: true, categoria: "pipoca", nome: "Saturno", subtitulo: "Nutella",
-      imagem: "img/sabores/saturno.jpg",
+      imagem: "img/sabores/saturno-v2.jpg",
       descricao: "O inconfundível sabor da Nutella, cremoso e irresistível, para os verdadeiros amantes de chocolate.",
       tamanhos: [{ nome: "500 ml", preco: 33 }, { nome: "1 L", preco: 48 }],
       somente: { "500 ml": 37, "1 L": 50 },
