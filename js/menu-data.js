@@ -76,7 +76,7 @@ window.PIPORIA_MENU = {
     },
     {
       id: "marte", ilustrativa: true, categoria: "pipoca", nome: "Marte", subtitulo: "Bueno",
-      imagem: "img/sabores/marte-v2.jpg",
+      imagem: "img/sabores/marte-v3.jpg",
       descricao: "Anéis de sabor envolvendo uma explosão de creme de avelã e chocolate. Um clássico que conquista toda a galáxia.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#b5832f", cor2: "#e6b560", combinavel: true
