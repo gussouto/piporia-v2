@@ -128,12 +128,12 @@
     errNome.textContent = ""; errEnd.textContent = "";
     if (!nome) { errNome.textContent = "Informe seu nome."; f.nome.focus(); return; }
     if (tipo === "entrega") {
-      if (cep.length !== 8) { errEnd.textContent = "Informe o CEP com 8 números."; f.cep.focus(); return; }
+      if (cep.length && cep.length !== 8) { errEnd.textContent = "O CEP precisa ter 8 números. Corrija ou apague o CEP e preencha o endereço."; f.cep.focus(); return; }
       if (!endereco) { errEnd.textContent = "Informe a rua ou avenida."; f.endereco.focus(); return; }
       if (!numero) { errEnd.textContent = "Informe o número (ou escreva s/n)."; f.numero.focus(); return; }
       if (!bairro) { errEnd.textContent = "Informe o bairro."; f.bairro.focus(); return; }
       if (!cidade) { errEnd.textContent = "Informe a cidade."; f.cidade.focus(); return; }
-      endereco = endereco + ", " + numero + (compl ? " (" + compl + ")" : "") + " - " + bairro + ", " + cidade + (uf ? "/" + uf : "") + " - CEP " + cep.slice(0, 5) + "-" + cep.slice(5);
+      endereco = endereco + ", " + numero + (compl ? " (" + compl + ")" : "") + " - " + bairro + ", " + cidade + (uf ? "/" + uf : "") + (cep.length === 8 ? " - CEP " + cep.slice(0, 5) + "-" + cep.slice(5) : "");
     }
 
     var linhas = items.map(function (i) {

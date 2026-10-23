@@ -78,9 +78,10 @@
             </div>
             <div class="field" id="addr-field" hidden>
               <div class="frete-aviso" role="note"><span data-i="truck"></span><p><strong>Frete a combinar.</strong> O valor da entrega não está incluso no total. Combinamos com você no WhatsApp, de acordo com o endereço.</p></div>
-              <label for="cep">CEP</label>
+              <label for="cep">CEP <span class="opt-txt">(opcional)</span></label>
               <input type="text" id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000">
               <p class="cep-status" id="cep-status" role="status" aria-live="polite"></p>
+              <p class="cep-help">Sabendo o CEP, preenchemos o endereço para você. Não sabe? <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener">Procure aqui</a> ou preencha os campos abaixo.</p>
               <div class="addr-grid">
                 <div class="addr-rua">
                   <label for="endereco">Rua / Avenida</label>

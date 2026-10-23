@@ -639,3 +639,6 @@ h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-se
 .frete-aviso svg { width: 22px; height: 22px; }
 .frete-aviso p { margin: 0; font-size: .93rem; line-height: 1.5; }
 .frete-aviso strong { color: #f6d27a; }
+.cep-help { margin: 8px 0 0; font-size: .88rem; color: #cfc6ae; line-height: 1.45; }
+.cep-help a { color: #f6d27a; text-decoration: underline; }
+.order-form .field > label .opt-txt { font-weight: 400; opacity: .75; }
