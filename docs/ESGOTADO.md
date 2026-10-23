@@ -8,7 +8,7 @@ e mostra "Esgotado" sozinho, em poucos minutos. Não precisa mexer no código.
 1. Entre em [Google Planilhas](https://sheets.google.com) e crie uma planilha nova.
 2. Menu **Arquivo > Importar > Fazer upload** e envie `docs/estoque-modelo.csv`.
    Escolha "Substituir planilha".
-3. Selecione a coluna **esgotado** (D), sem o título, e use **Inserir > Caixa de seleção**.
+3. Selecione a coluna **esgotado**, de D2 até D17 (sem o título), e use **Inserir > Caixa de seleção**.
    Assim a Pipória só marca ou desmarca a caixinha.
 4. **Arquivo > Compartilhar > Publicar na Web**. Em "Link", escolha a aba e o formato
    **Valores separados por vírgula (.csv)** e clique em **Publicar**.
@@ -21,9 +21,9 @@ e mostra "Esgotado" sozinho, em poucos minutos. Não precisa mexer no código.
 - Marcou a caixa **esgotado** da linha do produto: ele aparece como **Esgotado** no site.
 - Desmarcou: volta ao normal.
 - Coluna **aviso** (opcional): texto que aparece para o cliente, por exemplo "Volta amanhã".
-- Coluna **tamanho** (opcional): para esgotar só um tamanho, crie outra linha com o mesmo
-  `id` e escreva o tamanho igual ao do cardápio (`500 ml` ou `1 L`). Deixe vazia para
-  esgotar o produto inteiro.
+- Cada produto tem **uma linha por tamanho** (500 ml, 1 L, Garrafa, Unidade). Marque só a
+  linha do tamanho que acabou. Se todos os tamanhos do produto estiverem marcados, o produto
+  inteiro aparece como Esgotado.
 
 A atualização leva alguns minutos (o Google guarda uma cópia da planilha por um tempo).
 
@@ -33,7 +33,7 @@ A atualização leva alguns minutos (o Google guarda uma cópia da planilha por 
 |---|---|
 | id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, urano, plutao, saturno, acai-garrafa, panqueca). Não altere. |
 | produto | só para a Pipória se achar. O site ignora. |
-| tamanho | opcional, veja acima |
+| tamanho | 500 ml, 1 L, Garrafa ou Unidade. Não altere. |
 | esgotado | marcado (VERDADEIRO) ou desmarcado (FALSO). Também vale SIM/NAO. |
 | aviso | opcional, mensagem para o cliente |
 

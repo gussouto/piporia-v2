@@ -81,7 +81,8 @@
       return { out: out, aviso: aviso };
     });
     var all = sizes.length > 0 && sizes.every(function (s) { return s.out; });
-    var aviso = (whole && whole.out && whole.aviso) || (sizes[0] && sizes[0].aviso) || "";
+    var aviso = (whole && whole.out && whole.aviso) || "";
+    if (!aviso) sizes.forEach(function (z) { if (!aviso && z.out && z.aviso) aviso = z.aviso; });
     return { out: all, aviso: aviso, sizes: sizes };
   }
 
