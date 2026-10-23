@@ -37,7 +37,8 @@
     { img: "img/galeria-5.jpg", alt: "Panqueca da Pipória", t: "Panqueca", s: "Frango ou carne", d: "Panqueca recheada, nos sabores frango e carne.", href: "cardapio.html?cat=panqueca", ic: "pancake" },
     { img: "img/galeria-6.jpg", alt: "Balde de pipoca Pipória com ninho e creme de avelã", t: "Ninho e avelã", s: "Pipocas Gourmet", d: "Creme de ninho e creme de avelã sobre a pipoca.", href: "cardapio.html?cat=pipoca", ic: "bucket" },
     { img: "img/galeria-7.jpg", alt: "Balde de pipoca Pipória com Nutella e Bueno, diante do astronauta luminoso da loja", t: "Nutella e Bueno", s: "Pipocas Gourmet", d: "Nutella e creme de Bueno sobre a pipoca.", href: "cardapio.html?cat=pipoca", ic: "bucket" },
-    { img: "img/galeria-8.jpg", alt: "Balde de pipoca Pipória com cookies e Nutella", t: "Cookies e Nutella", s: "Pipocas Gourmet", d: "Cookies crocantes e Nutella cremosa no balde.", href: "cardapio.html?cat=pipoca", ic: "bucket" }
+    { img: "img/galeria-8.jpg", alt: "Balde de pipoca Pipória com cookies e Nutella", t: "Cookies e Nutella", s: "Pipocas Gourmet", d: "Cookies crocantes e Nutella cremosa no balde.", href: "cardapio.html?cat=pipoca", ic: "bucket" },
+    { img: "img/galeria-9.jpg", alt: "Balde de pipoca Pipória com cookies e creme branco", t: "Cookies", s: "Pipocas Gourmet", d: "Pipoca com cookies e creme branco, bem cremosa.", href: "cardapio.html?cat=pipoca", ic: "bucket" }
   ];
   var track = document.getElementById("marquee-track");
   if (track) {
