@@ -69,7 +69,7 @@ window.PIPORIA_MENU = {
     },
     {
       id: "netuno", ilustrativa: true, categoria: "pipoca", nome: "Netuno", subtitulo: "Cookies & Cream",
-      imagem: "img/sabores/netuno-v2.jpg",
+      imagem: "img/sabores/netuno-v3.jpg",
       descricao: "A crocância dos cookies encontrando a suavidade do creme. Uma combinação que conquista qualquer galáxia.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#d9d2c6", cor2: "#3a3430", combinavel: true
