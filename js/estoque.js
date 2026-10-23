@@ -75,7 +75,14 @@
     var id = norm(it.id);
     var whole = find(id, "");
     var sizes = it.tamanhos.map(function (t) {
-      var r = find(id, norm(t.nome));
+      var pl = t.planilha, r;
+      if (pl) {
+        /* a opção tem linha própria na planilha (ex.: um sabor de açaí) */
+        var sid = norm(pl.id || it.id);
+        r = find(sid, norm(pl.tamanho != null ? pl.tamanho : t.nome)) || find(sid, "");
+      } else {
+        r = find(id, norm(t.nome));
+      }
       var out = !!(whole && whole.out) || !!(r && r.out);
       var aviso = (r && r.out && r.aviso) || (whole && whole.out && whole.aviso) || "";
       return { out: out, aviso: aviso };

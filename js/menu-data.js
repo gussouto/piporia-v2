@@ -17,6 +17,9 @@
    - combinavel  true = permite escolher um segundo recheio
    - opcao       rótulo da escolha em "tamanhos" (padrão "Tamanho"; use
                  "Sabor" quando as opções forem sabores)
+   - planilha    (opcional, dentro de cada opção de "tamanhos") como a opção
+                 aparece na planilha de estoque: { id, tamanho }. Sem isso,
+                 vale o id do item e o nome da opção (ex.: lua + 500 ml)
    - somente     preço quando o balde leva só este sabor, por tamanho.
                  Ex.: { "500 ml": 37, "1 L": 50 } (usado no Saturno)
 
@@ -101,10 +104,10 @@ window.PIPORIA_MENU = {
       subtitulo: "Para levar", opcao: "Sabor",
       descricao: "Açaí cremoso servido na garrafa, pronto para levar e tomar onde quiser. Quatro sabores: morango com avelã, ninho com avelã, maracujá e avelã.",
       tamanhos: [
-        { nome: "Morango com avelã", preco: null },
-        { nome: "Ninho com avelã", preco: null },
-        { nome: "Maracujá", preco: null },
-        { nome: "Avelã", preco: null }
+        { nome: "Morango com avelã", preco: null, planilha: { id: "acai-morango", tamanho: "Garrafa" } },
+        { nome: "Ninho com avelã", preco: null, planilha: { id: "acai-ninho", tamanho: "Garrafa" } },
+        { nome: "Maracujá", preco: null, planilha: { id: "acai-maracuja", tamanho: "Garrafa" } },
+        { nome: "Avelã", preco: null, planilha: { id: "acai-avela", tamanho: "Garrafa" } }
       ],
       imagem: "img/galeria-4.jpg"
     },
@@ -114,7 +117,10 @@ window.PIPORIA_MENU = {
       id: "panqueca", categoria: "panqueca", nome: "Panqueca",
       subtitulo: "Frango ou carne", opcao: "Sabor",
       descricao: "Panqueca recheada, nos sabores frango e carne. Escolha o seu.",
-      tamanhos: [{ nome: "Frango", preco: 14 }, { nome: "Carne", preco: 14 }],
+      tamanhos: [
+        { nome: "Frango", preco: 14, planilha: { id: "panqueca-frango", tamanho: "Unidade" } },
+        { nome: "Carne", preco: 14, planilha: { id: "panqueca-carne", tamanho: "Unidade" } }
+      ],
       imagem: "img/galeria-5.jpg"
     }
   ]
