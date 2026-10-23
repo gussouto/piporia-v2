@@ -83,7 +83,7 @@ window.PIPORIA_MENU = {
     },
     {
       id: "plutao", ilustrativa: true, categoria: "pipoca", nome: "Plutão", subtitulo: "Ovomaltine",
-      imagem: "img/sabores/plutao-v2.jpg",
+      imagem: "img/sabores/plutao-v3.jpg",
       descricao: "A crocância inconfundível do Ovomaltine que transforma cada mordida em pura nostalgia e prazer.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#6b4226", cor2: "#b07a45", combinavel: true
