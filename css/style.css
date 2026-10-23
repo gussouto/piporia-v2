@@ -599,3 +599,7 @@ h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-se
 .cart-line.soldout .th img { filter: grayscale(.9) brightness(.82); }
 .sold-warn { grid-column: 2 / 4; margin: 0; color: #b3261e; font-weight: 600; font-size: .93rem; }
 :root[data-theme="dark"] .sold-warn { color: #ffb4a3; }
+
+/* Aviso de preço (Saturno) */
+.price-hint { margin: 16px 0 0; font-size: .9rem; line-height: 1.55; color: var(--muted); }
+.modal-body > a.btn-block { margin-top: 20px; }

@@ -15,6 +15,10 @@
                  mostra o ícone de planeta
    - cor / cor2  (reservado, não usado no visual v2)
    - combinavel  true = permite escolher um segundo recheio
+   - opcao       rótulo da escolha em "tamanhos" (padrão "Tamanho"; use
+                 "Sabor" quando as opções forem sabores)
+   - somente     preço quando o balde leva só este sabor, por tamanho.
+                 Ex.: { "500 ml": 37, "1 L": 50 } (usado no Saturno)
 
    ESGOTADO: a Pipória marca numa planilha (veja docs/ESGOTADO.md).
    Cole o endereço da planilha publicada em "estoqueUrl" logo abaixo.
@@ -48,70 +52,76 @@ window.PIPORIA_MENU = {
       id: "lua", categoria: "pipoca", nome: "Lua", subtitulo: "Leitinho",
       imagem: "img/sabores/lua.jpg",
       descricao: "Doce, suave e cremoso como a luz da lua.",
-      tamanhos: [{ nome: "500 ml", preco: 26 }, { nome: "1 L", preco: 40 }],
+      tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#e7c98b", cor2: "#fff3d1", combinavel: true
     },
     {
       id: "jupiter", categoria: "pipoca", nome: "Júpiter", subtitulo: "Creme de avelã",
       imagem: "img/sabores/jupiter.jpg",
       descricao: "Intenso, envolvente e cheio de camadas de sabor.",
-      tamanhos: [{ nome: "500 ml", preco: 26 }, { nome: "1 L", preco: 40 }],
+      tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#7a4a2a", cor2: "#c58a55", combinavel: true
     },
     {
       id: "netuno", categoria: "pipoca", nome: "Netuno", subtitulo: "Cookies & Cream",
       imagem: "img/sabores/netuno.jpg",
       descricao: "A crocância dos cookies encontrando a suavidade do creme. Uma combinação que conquista qualquer galáxia.",
-      tamanhos: [{ nome: "500 ml", preco: 26 }, { nome: "1 L", preco: 40 }],
+      tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#d9d2c6", cor2: "#3a3430", combinavel: true
     },
     {
       id: "marte", categoria: "pipoca", nome: "Marte", subtitulo: "Bueno",
       imagem: "img/sabores/marte.jpg",
       descricao: "Anéis de sabor envolvendo uma explosão de creme de avelã e chocolate. Um clássico que conquista toda a galáxia.",
-      tamanhos: [{ nome: "500 ml", preco: 26 }, { nome: "1 L", preco: 40 }],
+      tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#b5832f", cor2: "#e6b560", combinavel: true
     },
     {
       id: "urano", categoria: "pipoca", nome: "Urano", subtitulo: "Rafaello",
       imagem: "img/sabores/urano.jpg",
       descricao: "A delicadeza do coco com chocolate branco que derrete na boca. Sofisticação em cada pedacinho.",
-      tamanhos: [{ nome: "500 ml", preco: 26 }, { nome: "1 L", preco: 40 }],
+      tamanhos: [{ nome: "500 ml", preco: null }, { nome: "1 L", preco: null }],
       cor: "#efe3c8", cor2: "#ffffff", combinavel: true
     },
     {
       id: "plutao", categoria: "pipoca", nome: "Plutão", subtitulo: "Ovomaltine",
       imagem: "img/sabores/plutao.jpg",
       descricao: "A crocância inconfundível do Ovomaltine que transforma cada mordida em pura nostalgia e prazer.",
-      tamanhos: [{ nome: "500 ml", preco: 26 }, { nome: "1 L", preco: 40 }],
+      tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#6b4226", cor2: "#b07a45", combinavel: true
     },
     {
       id: "saturno", categoria: "pipoca", nome: "Saturno", subtitulo: "Nutella",
       imagem: "img/sabores/saturno.jpg",
       descricao: "O inconfundível sabor da Nutella, cremoso e irresistível, para os verdadeiros amantes de chocolate.",
-      tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 45 }],
+      tamanhos: [{ nome: "500 ml", preco: 33 }, { nome: "1 L", preco: 48 }],
+      somente: { "500 ml": 37, "1 L": 50 },
       cor: "#5a3520", cor2: "#9a6a42", combinavel: true
     },
 
     /* ---------------- AÇAÍ NA GARRAFA ----------------
-       Valores ainda não informados: o site mostra "Consultar valor"
+       Valor ainda não informado: o site mostra "Consultar valor"
        e leva o cliente ao WhatsApp. Troque preco: null pelo valor
-       (ex.: preco: 18) e o item passa a ir para o carrinho. */
+       (ex.: preco: 18) em cada sabor e o item passa a ir para o carrinho. */
     {
       id: "acai-garrafa", categoria: "acai", nome: "Açaí na Garrafa",
-      subtitulo: "Para levar",
-      descricao: "Açaí cremoso servido na garrafa, pronto para levar e tomar onde quiser. Pergunte pelos sabores e acompanhamentos disponíveis.",
-      tamanhos: [{ nome: "Garrafa", preco: null }],
+      subtitulo: "Para levar", opcao: "Sabor",
+      descricao: "Açaí cremoso servido na garrafa, pronto para levar e tomar onde quiser. Quatro sabores: morango com avelã, ninho com avelã, maracujá e avelã.",
+      tamanhos: [
+        { nome: "Morango com avelã", preco: null },
+        { nome: "Ninho com avelã", preco: null },
+        { nome: "Maracujá", preco: null },
+        { nome: "Avelã", preco: null }
+      ],
       imagem: "img/galeria-4.jpg"
     },
 
     /* ---------------- PANQUECA ---------------- */
     {
       id: "panqueca", categoria: "panqueca", nome: "Panqueca",
-      subtitulo: "Com calda",
-      descricao: "Panqueca recheada e finalizada com calda. Pergunte pelos recheios disponíveis.",
-      tamanhos: [{ nome: "Unidade", preco: null }],
+      subtitulo: "Frango ou carne", opcao: "Sabor",
+      descricao: "Panqueca recheada, nos sabores frango e carne. Escolha o seu.",
+      tamanhos: [{ nome: "Frango", preco: 14 }, { nome: "Carne", preco: 14 }],
       imagem: "img/galeria-5.jpg"
     }
   ]
