@@ -7,9 +7,9 @@ ou publique a pasta inteira (Cloudflare Pages, Vercel etc.). Não precisa de bui
 - `index.html` Home · `cardapio.html` · `pedido.html` · `sobre.html`
 
 ## Onde mudar as coisas
-- **Cardápio** (itens, preços, fotos): `js/menu-data.js`. Onde está `preco: null` (açaí e
-  por enquanto) o site mostra "Consultar valor"; troque pelo valor e o item vai
-  para o carrinho. No Saturno, `somente` guarda o preço de "só Saturno".
+- **Cardápio** (itens, preços, fotos): `js/menu-data.js`. Com `preco: null` o site
+  mostra "Consultar valor" e leva ao WhatsApp; com um número o item vai para o
+  carrinho (açaí: R$ 25 em todos os sabores). No Saturno, `somente` guarda o preço de "só Saturno".
 - **Esgotado**: planilha do Google, veja `docs/ESGOTADO.md`.
 - **Telefone, Instagram, endereço e texto de horário**: topo de `js/app.js`
   (`WA_NUMBER`, `INSTAGRAM`, `ADDRESS`, `HORARIO`).

@@ -98,18 +98,16 @@ window.PIPORIA_MENU = {
     },
 
     /* ---------------- AÇAÍ NA GARRAFA ----------------
-       Valor ainda não informado: o site mostra "Consultar valor"
-       e leva o cliente ao WhatsApp. Troque preco: null pelo valor
-       (ex.: preco: 18) em cada sabor e o item passa a ir para o carrinho. */
+       R$ 25,00 em todos os sabores. */
     {
       id: "acai-garrafa", categoria: "acai", nome: "Açaí na Garrafa",
       subtitulo: "Para levar", opcao: "Sabor",
       descricao: "Açaí cremoso servido na garrafa, pronto para levar e tomar onde quiser. Quatro sabores: morango com avelã, ninho com avelã, maracujá e avelã.",
       tamanhos: [
-        { nome: "Morango com avelã", preco: null, planilha: { id: "acai-morango", tamanho: "Garrafa" } },
-        { nome: "Ninho com avelã", preco: null, planilha: { id: "acai-ninho", tamanho: "Garrafa" } },
-        { nome: "Maracujá", preco: null, planilha: { id: "acai-maracuja", tamanho: "Garrafa" } },
-        { nome: "Avelã", preco: null, planilha: { id: "acai-avela", tamanho: "Garrafa" } }
+        { nome: "Morango com avelã", preco: 25, planilha: { id: "acai-morango", tamanho: "Garrafa" } },
+        { nome: "Ninho com avelã", preco: 25, planilha: { id: "acai-ninho", tamanho: "Garrafa" } },
+        { nome: "Maracujá", preco: 25, planilha: { id: "acai-maracuja", tamanho: "Garrafa" } },
+        { nome: "Avelã", preco: 25, planilha: { id: "acai-avela", tamanho: "Garrafa" } }
       ],
       imagem: "img/galeria-4.jpg"
     },
