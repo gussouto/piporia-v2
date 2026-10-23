@@ -15,9 +15,15 @@
                  mostra o ícone de planeta
    - cor / cor2  (reservado, não usado no visual v2)
    - combinavel  true = permite escolher um segundo recheio
+
+   ESGOTADO: a Pipória marca numa planilha (veja docs/ESGOTADO.md).
+   Cole o endereço da planilha publicada em "estoqueUrl" logo abaixo.
+   Vazio = o recurso fica desligado e tudo aparece disponível.
    ========================================================== */
 
 window.PIPORIA_MENU = {
+  estoqueUrl: "",
+
   categorias: [
     {
       id: "pipoca",

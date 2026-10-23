@@ -1,7 +1,7 @@
 /* Home: sabores em destaque, galeria em movimento, sete planetas e faixa de informações */
 (function () {
   "use strict";
-  var P = window.Piporia, M = window.PIPORIA_MENU;
+  var P = window.Piporia, M = window.PIPORIA_MENU, E = window.PiporiaEstoque;
   var pipocas = M.itens.filter(function (i) { return i.categoria === "pipoca"; });
 
   function minPrice(it) {
@@ -54,7 +54,7 @@
 
   /* Sete planetas */
   var fl = document.getElementById("flavors");
-  if (fl) {
+  function renderFlavors() {
     var curtas = {
       lua: "Doce, suave e cremoso.",
       jupiter: "Intenso e cheio de camadas de sabor.",
@@ -65,14 +65,16 @@
       saturno: "Nutella cremosa e irresistível."
     };
     fl.innerHTML = pipocas.map(function (it) {
-      return '<a class="flavor" href="cardapio.html?item=' + it.id + '">' +
-        '<div class="ph"><img src="' + it.imagem + '" alt="Pipoca gourmet sabor ' + P.esc(it.subtitulo) + '" loading="lazy"></div>' +
+      var out = E.info(it).out;
+      return '<a class="flavor' + (out ? " soldout" : "") + '" href="cardapio.html?item=' + it.id + '">' +
+        '<div class="ph">' + (out ? '<span class="sold-tag">Esgotado</span>' : "") + '<img src="' + it.imagem + '" alt="Pipoca gourmet sabor ' + P.esc(it.subtitulo) + '" loading="lazy"></div>' +
         '<span class="pb">' + P.flavorIcon(it.id) + "</span>" +
         '<div class="tx"><strong>' + P.esc(it.nome) + '</strong><span class="sub">' + P.esc(it.subtitulo) + "</span>" +
         '<span class="ds">' + P.esc(curtas[it.id] || "") + "</span>" +
-        '<em class="pr">a partir de ' + P.brl(minPrice(it)) + "</em></div></a>";
+        '<em class="pr">' + (out ? "Esgotado no momento" : "a partir de " + P.brl(minPrice(it))) + "</em></div></a>";
     }).join("");
   }
+  if (fl) { renderFlavors(); E.onChange(renderFlavors); }
 
   /* Faixa de informações */
   var info = document.getElementById("info-grid");

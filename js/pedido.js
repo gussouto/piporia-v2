@@ -1,13 +1,23 @@
 /* Pedido: revisar carrinho e enviar pelo WhatsApp */
 (function () {
   "use strict";
-  var P = window.Piporia;
+  var P = window.Piporia, E = window.PiporiaEstoque, M = window.PIPORIA_MENU;
   var listEl = document.getElementById("cart-list");
   var sumEl = document.getElementById("cart-sum");
   var formEl = document.getElementById("order-form");
   var emptyEl = document.getElementById("cart-empty");
   var fullEl = document.getElementById("cart-full");
   var addrField = document.getElementById("addr-field");
+
+  /* Devolve os nomes esgotados de um item do carrinho (chave: id|tamanho|segundo) */
+  function esgotadoDe(line) {
+    var p = String(line.key).split("|"), nomes = [];
+    var byId = function (id) { return M.itens.filter(function (i) { return i.id === id; })[0]; };
+    var a = byId(p[0]), b = p[2] ? byId(p[2]) : null;
+    if (a && E.sizeOut(a, p[1])) nomes.push(a.nome);
+    if (b && E.sizeOut(b, p[1])) nomes.push(b.nome);
+    return nomes;
+  }
 
   function render() {
     var items = P.cart.get();
@@ -16,14 +26,16 @@
     fullEl.hidden = !has;
     if (!has) return;
     listEl.innerHTML = items.map(function (i) {
-      return '<div class="cart-line" data-key="' + P.esc(i.key) + '">' +
+      var off = esgotadoDe(i);
+      return '<div class="cart-line' + (off.length ? " soldout" : "") + '" data-key="' + P.esc(i.key) + '">' +
         '<div class="th"><img src="' + P.esc(i.img || "img/logo.png") + '" alt=""></div>' +
         "<div><h3>" + P.esc(i.nome) + '</h3><div class="det">' + P.esc(i.detalhe) + " · " + P.brl(i.preco) + " cada</div></div>" +
         '<div class="price">' + P.brl(i.preco * i.qtd) + "</div>" +
         '<div class="actions"><div class="qty" role="group" aria-label="Quantidade de ' + P.esc(i.nome) + '">' +
         '<button type="button" data-act="minus" aria-label="Diminuir">−</button><output>' + i.qtd + "</output>" +
         '<button type="button" data-act="plus" aria-label="Aumentar">+</button></div>' +
-        '<button type="button" class="link-btn rm" data-act="remove">' + P.icon("trash") + 'Remover</button></div></div>';
+        '<button type="button" class="link-btn rm" data-act="remove">' + P.icon("trash") + 'Remover</button></div>' +
+        (off.length ? '<p class="sold-warn" role="status">' + P.esc(off.join(" e ")) + " esgotou. Remova este item para enviar o pedido.</p>" : "") + "</div>";
     }).join("");
     sumEl.textContent = P.brl(P.cart.total());
   }
@@ -59,6 +71,15 @@
     var tipo = f.tipo.value;
     var endereco = f.endereco.value.trim();
     var obs = f.obs.value.trim();
+    var errStock = document.getElementById("err-stock");
+    errStock.textContent = "";
+    var fora = items.filter(function (i) { return esgotadoDe(i).length; });
+    if (fora.length) {
+      errStock.textContent = "Há item esgotado no carrinho. Remova-o para enviar o pedido.";
+      var l = listEl.querySelector(".cart-line.soldout");
+      if (l) l.scrollIntoView({ block: "center", behavior: "smooth" });
+      return;
+    }
     var errNome = document.getElementById("err-nome");
     var errEnd = document.getElementById("err-end");
     errNome.textContent = ""; errEnd.textContent = "";
@@ -77,5 +98,6 @@
     window.open(P.waLink(msg), "_blank", "noopener");
   });
 
+  E.onChange(render);
   render();
 })();

@@ -584,3 +584,18 @@ input::placeholder, textarea::placeholder { color: #8a8fa8; }
 .sum strong { font-size: 1.85rem; font-weight: 700; letter-spacing: -.01em; }
 .m-price strong { font-size: 1.3rem; font-weight: 700; }
 h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+
+/* ---------- Esgotado ---------- */
+.sold-tag { position: absolute; top: 12px; left: 12px; z-index: 2; padding: 7px 13px; border-radius: 999px; background: #2a0f12; color: #ffd9d2; font: 700 .76rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; box-shadow: 0 4px 14px rgba(0, 0, 0, .35); }
+.flavor .ph { position: relative; }
+.m-card.soldout .m-media img, .flavor.soldout .ph img { filter: grayscale(.9) brightness(.82); }
+.m-add.is-off { background: transparent; border: 1.5px solid var(--line); color: var(--muted); }
+.opt.is-off input { cursor: not-allowed; }
+.opt.is-off > span { opacity: .5; cursor: not-allowed; }
+.sold-note { margin-top: 20px; padding: 14px 16px; border-radius: 14px; background: color-mix(in srgb, #d65a4a 14%, transparent); border: 1px solid color-mix(in srgb, #d65a4a 45%, transparent); font-weight: 600; line-height: 1.45; }
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-block:disabled { margin-top: 16px; }
+.sold-ask { display: inline-block; margin-top: 14px; }
+.cart-line.soldout .th img { filter: grayscale(.9) brightness(.82); }
+.sold-warn { grid-column: 2 / 4; margin: 0; color: #b3261e; font-weight: 600; font-size: .93rem; }
+:root[data-theme="dark"] .sold-warn { color: #ffb4a3; }
