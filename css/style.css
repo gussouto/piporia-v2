@@ -603,3 +603,17 @@ h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-se
 /* Aviso de preço (Saturno) */
 .price-hint { margin: 16px 0 0; font-size: .9rem; line-height: 1.55; color: var(--muted); }
 .modal-body > a.btn-block { margin-top: 20px; }
+
+/* ---------- WhatsApp: só para dúvidas ---------- */
+.wa-float .wa-label { display: none; }
+@media (min-width: 721px) {
+  .wa-float { width: auto; height: 58px; padding: 0 24px 0 20px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px; }
+  .wa-float svg { width: 28px; height: 28px; }
+  .wa-float .wa-label { display: inline; font: 700 .98rem/1 var(--sans); }
+}
+
+/* ---------- Imagem ilustrativa ---------- */
+.ilus-tag { position: absolute; left: 10px; bottom: 10px; z-index: 2; padding: 5px 10px; border-radius: 999px; background: rgba(6, 18, 48, .74); color: #f7ecd5; font: 600 .68rem/1 var(--sans); letter-spacing: .02em; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); pointer-events: none; }
+.ilus-note { color: var(--muted); font-size: .85rem; margin: 18px 0 0; text-align: center; }
+.cat-note.ilus-note { margin-top: 4px; font-size: .85rem; }
+.wa-float, .wa-float:hover { text-decoration: none; }

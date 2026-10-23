@@ -183,8 +183,8 @@
       '<div class="copy">© 2026 Pipória — Todos os direitos reservados.</div>' +
       '<i class="spark" style="--s:18px;right:3%;bottom:20%"></i><i class="spark" style="--s:12px;left:50%;bottom:12%"></i>' +
       "</div></footer>" +
-      '<a class="wa-float" href="' + waLink("Olá! Vim pelo site da Pipória e gostaria de fazer um pedido.") +
-      '" target="_blank" rel="noopener" aria-label="Falar com a Pipória no WhatsApp">' + icon("wa") + "</a>";
+      '<a class="wa-float" href="' + waLink("Olá! Vim pelo site da Pipória e tenho uma dúvida.") +
+      '" target="_blank" rel="noopener" aria-label="Tirar dúvidas com a Pipória no WhatsApp" title="Tirar dúvidas no WhatsApp">' + icon("wa") + '<span class="wa-label">Dúvidas?</span></a>';
   }
 
   /* ---------- Eventos globais ---------- */

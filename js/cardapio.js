@@ -34,6 +34,7 @@
   });
 
   /* ---------- Cards ---------- */
+  var ILUS = '<span class="ilus-tag">Imagem ilustrativa</span>';
   function cardHTML(it) {
     var out = E.info(it).out;
     var media = it.imagem
@@ -49,7 +50,7 @@
       ? '<div class="m-sizes">' + it.tamanhos.map(function (t) { return "<span><b>" + P.esc(t.nome) + "</b> " + (t.preco == null ? "" : P.brl(t.preco)) + "</span>"; }).join("") + "</div>"
       : "";
     return '<div class="m-card' + (out ? ' soldout' : '') + '" role="button" tabindex="0" data-id="' + it.id + '" aria-label="' + P.esc(it.nome) + ': ver detalhes e adicionar">' +
-      '<div class="m-media">' + (out ? '<span class="sold-tag">Esgotado</span>' : "") + media + "</div>" +
+      '<div class="m-media">' + (out ? '<span class="sold-tag">Esgotado</span>' : "") + media + (it.ilustrativa ? ILUS : "") + "</div>" +
       '<div class="m-body"><h3>' + P.esc(it.nome) + "</h3>" +
       (it.subtitulo ? '<div class="m-sub">' + P.esc(it.subtitulo) + "</div>" : "") +
       '<p class="m-desc">' + P.esc(it.descricao) + "</p>" + sizes +
@@ -75,7 +76,8 @@
       if (!itens.length) return "";
       return '<section class="cat-block" aria-labelledby="cat-' + c.id + '">' +
         '<div class="cat-head"><h2 class="cat-title" id="cat-' + c.id + '">' + P.esc(c.nome) + "</h2>" +
-        (c.nota ? '<p class="cat-note">' + P.esc(c.nota) + "</p>" : "") + "</div>" +
+        (c.nota ? '<p class="cat-note">' + P.esc(c.nota) + "</p>" : "") +
+        (itens.some(function (i) { return i.ilustrativa; }) ? '<p class="cat-note ilus-note">Imagens meramente ilustrativas.</p>' : "") + "</div>" +
         '<div class="menu-grid">' + itens.map(cardHTML).join("") + "</div></section>";
     }).join("");
   }
@@ -144,7 +146,7 @@
         '">Perguntar o valor no WhatsApp</a>');
 
     dlg.innerHTML =
-      '<div class="modal-grid"><div class="modal-media">' + media + "</div>" +
+      '<div class="modal-grid"><div class="modal-media">' + media + (it.ilustrativa ? ILUS : "") + "</div>" +
       '<div class="modal-body"><button type="button" class="modal-close" aria-label="Fechar">×</button>' +
       "<h3>" + P.esc(it.nome) + "</h3>" +
       (it.subtitulo ? '<div class="m-sub">' + P.esc(it.subtitulo) + "</div>" : "") +

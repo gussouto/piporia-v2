@@ -66,7 +66,7 @@
     fl.innerHTML = pipocas.map(function (it) {
       var out = E.info(it).out;
       return '<a class="flavor' + (out ? " soldout" : "") + '" href="cardapio.html?item=' + it.id + '">' +
-        '<div class="ph">' + (out ? '<span class="sold-tag">Esgotado</span>' : "") + '<img src="' + it.imagem + '" alt="Pipoca gourmet sabor ' + P.esc(it.subtitulo) + '" loading="lazy"></div>' +
+        '<div class="ph">' + (out ? '<span class="sold-tag">Esgotado</span>' : "") + (it.ilustrativa ? '<span class="ilus-tag">Imagem ilustrativa</span>' : "") + '<img src="' + it.imagem + '" alt="Pipoca gourmet sabor ' + P.esc(it.subtitulo) + '" loading="lazy"></div>' +
         '<span class="pb">' + P.flavorIcon(it.id) + "</span>" +
         '<div class="tx"><strong>' + P.esc(it.nome) + '</strong><span class="sub">' + P.esc(it.subtitulo) + "</span>" +
         '<span class="ds">' + P.esc(curtas[it.id] || "") + "</span>" +
