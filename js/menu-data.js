@@ -90,7 +90,7 @@ window.PIPORIA_MENU = {
     },
     {
       id: "saturno", ilustrativa: true, categoria: "pipoca", nome: "Saturno", subtitulo: "Nutella",
-      imagem: "img/sabores/saturno-v2.jpg",
+      imagem: "img/sabores/saturno-v3.jpg",
       descricao: "O inconfundível sabor da Nutella, cremoso e irresistível, para os verdadeiros amantes de chocolate.",
       tamanhos: [{ nome: "500 ml", preco: 33 }, { nome: "1 L", preco: 48 }],
       somente: { "500 ml": 37, "1 L": 50 },
