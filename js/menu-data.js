@@ -22,7 +22,7 @@
    ========================================================== */
 
 window.PIPORIA_MENU = {
-  estoqueUrl: "",
+  estoqueUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTeidNwewtPUaFqropCS7dTjZK7k4zv4aFckEaHrL2XfSyg2AI4fVg_ane9LO7FaNYHmNxCjZbf7fRI/pub?gid=0&single=true&output=csv",
 
   categorias: [
     {
