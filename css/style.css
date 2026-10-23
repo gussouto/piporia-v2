@@ -642,3 +642,9 @@ h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-se
 .cep-help { margin: 8px 0 0; font-size: .88rem; color: #cfc6ae; line-height: 1.45; }
 .cep-help a { color: #f6d27a; text-decoration: underline; }
 .order-form .field > label .opt-txt { font-weight: 400; opacity: .75; }
+
+/* Foto real no bloco "Pipoca não é tudo igual" */
+.why-art .why-photo { left: var(--gut); bottom: 10px; transform: none; width: min(500px, calc(100% - var(--gut) - 24px)); max-width: none; aspect-ratio: 1; height: auto; object-fit: cover; border-radius: 50%; border: 5px solid var(--gold); box-shadow: 0 26px 50px rgba(11,23,56,.28); }
+.why-art .orbit { left: 62%; top: 4%; width: 40%; height: 34%; }
+@media (max-width: 1020px) { .why-art .why-photo { left: 50%; transform: translateX(-50%); bottom: 0; width: min(88%, 420px); } }
+@media (max-width: 480px) { .why-art .why-photo { width: min(84%, 340px); } }
