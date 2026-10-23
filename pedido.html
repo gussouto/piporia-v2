@@ -51,7 +51,7 @@
             </div>
             <div id="cart-list"></div>
             <div class="sum"><span data-i="compass"></span><span>Total dos itens</span><strong id="cart-sum"></strong></div>
-            <p class="note">O valor da entrega, se houver, é combinado com você no WhatsApp.</p>
+            <p class="note">Entrega: frete a combinar no WhatsApp, conforme o endereço.</p>
             <p style="margin:18px 0 0">
               <a class="btn btn-outline btn-sm" href="cardapio.html">Adicionar mais itens</a>
               <button type="button" class="link-btn" id="clear-cart" style="margin-left:14px">Limpar carrinho</button>
@@ -77,6 +77,7 @@
               </div>
             </div>
             <div class="field" id="addr-field" hidden>
+              <div class="frete-aviso" role="note"><span data-i="truck"></span><p><strong>Frete a combinar.</strong> O valor da entrega não está incluso no total. Combinamos com você no WhatsApp, de acordo com o endereço.</p></div>
               <label for="cep">CEP</label>
               <input type="text" id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000">
               <p class="cep-status" id="cep-status" role="status" aria-live="polite"></p>

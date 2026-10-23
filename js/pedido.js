@@ -143,7 +143,7 @@
       linhas.join("\n") + "\n\n" +
       "*Total dos itens: " + P.brl(P.cart.total()) + "*\n\n" +
       "*Nome:* " + nome + "\n" +
-      (tipo === "entrega" ? "*Entrega em:* " + endereco : "*Retirada* na loja (" + P.ADDRESS + ")") +
+      (tipo === "entrega" ? "*Entrega em:* " + endereco + "\n*Frete:* a combinar" : "*Retirada* na loja (" + P.ADDRESS + ")") +
       (obs ? "\n*Observações:* " + obs : "");
     window.open(P.waLink(msg), "_blank", "noopener");
   });

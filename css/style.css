@@ -633,3 +633,9 @@ h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-se
 .addr-cidade { grid-column: span 5; } .addr-uf { grid-column: span 1; }
 .addr-uf input { text-transform: uppercase; padding-left: 12px; padding-right: 8px; }
 @media (max-width: 480px) { .addr-rua, .addr-num { grid-column: span 6; } .addr-cidade { grid-column: span 4; } .addr-uf { grid-column: span 2; } #cep { max-width: none; } }
+
+.frete-aviso { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; margin-bottom: 18px; border: 1px solid rgba(246,210,122,.45); background: rgba(246,210,122,.10); border-radius: 14px; color: #f7ecd5; }
+.frete-aviso > span { flex: none; width: 22px; height: 22px; color: #f6d27a; margin-top: 2px; }
+.frete-aviso svg { width: 22px; height: 22px; }
+.frete-aviso p { margin: 0; font-size: .93rem; line-height: 1.5; }
+.frete-aviso strong { color: #f6d27a; }
