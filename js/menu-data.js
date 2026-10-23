@@ -109,7 +109,7 @@ window.PIPORIA_MENU = {
         { nome: "Maracujá", preco: 25, planilha: { id: "acai-maracuja", tamanho: "Garrafa" } },
         { nome: "Avelã", preco: 25, planilha: { id: "acai-avela", tamanho: "Garrafa" } }
       ],
-      imagem: "img/acai-garrafa-v2.jpg"
+      imagem: "img/acai-garrafa-v3.jpg"
     },
 
     /* ---------------- PANQUECA ---------------- */
