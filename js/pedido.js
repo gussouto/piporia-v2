@@ -58,6 +58,46 @@
     addrField.hidden = !delivery;
   });
 
+  /* CEP: busca o endereço no ViaCEP e preenche; se falhar, o cliente digita à mão */
+  var cepEl = document.getElementById("cep"), cepStatus = document.getElementById("cep-status");
+  var lastCep = "", cepTimer = null;
+  function setStatus(txt, kind) { cepStatus.textContent = txt || ""; cepStatus.className = "cep-status" + (kind ? " " + kind : ""); }
+  function fillAddr(d) {
+    var f = formEl.elements;
+    f.endereco.value = d.logradouro || f.endereco.value;
+    f.bairro.value = d.bairro || f.bairro.value;
+    f.cidade.value = d.localidade || f.cidade.value;
+    f.uf.value = d.uf || f.uf.value;
+  }
+  function lookupCep(digits) {
+    lastCep = digits;
+    setStatus("Buscando endereço…", "busy");
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var to = setTimeout(function () { if (ctrl) ctrl.abort(); }, 7000);
+    fetch("https://viacep.com.br/ws/" + digits + "/json/", ctrl ? { signal: ctrl.signal } : {})
+      .then(function (r) { if (!r.ok) throw new Error("http"); return r.json(); })
+      .then(function (d) {
+        clearTimeout(to);
+        if (digits !== lastCep) return;
+        if (d.erro) { setStatus("Não encontramos esse CEP. Confira os números ou preencha o endereço abaixo.", "warn"); return; }
+        fillAddr(d);
+        setStatus("Endereço encontrado. Confira e informe o número.", "ok");
+        var f = formEl.elements;
+        (d.logradouro ? f.numero : f.endereco).focus();
+      })
+      .catch(function () {
+        clearTimeout(to);
+        if (digits !== lastCep) return;
+        setStatus("Não conseguimos buscar agora. Preencha o endereço abaixo.", "warn");
+      });
+  }
+  cepEl.addEventListener("input", function () {
+    var d = cepEl.value.replace(/\D/g, "").slice(0, 8);
+    cepEl.value = d.length > 5 ? d.slice(0, 5) + "-" + d.slice(5) : d;
+    if (d.length === 8) { if (d !== lastCep) lookupCep(d); }
+    else { lastCep = ""; setStatus(""); }
+  });
+
   document.getElementById("clear-cart").addEventListener("click", function () {
     if (confirm("Limpar todos os itens do carrinho?")) P.cart.clear();
   });
@@ -70,6 +110,9 @@
     var nome = f.nome.value.trim();
     var tipo = f.tipo.value;
     var endereco = f.endereco.value.trim();
+    var numero = f.numero.value.trim(), compl = f.complemento.value.trim();
+    var bairro = f.bairro.value.trim(), cidade = f.cidade.value.trim(), uf = f.uf.value.trim().toUpperCase();
+    var cep = f.cep.value.replace(/\D/g, "");
     var obs = f.obs.value.trim();
     var errStock = document.getElementById("err-stock");
     errStock.textContent = "";
@@ -84,7 +127,14 @@
     var errEnd = document.getElementById("err-end");
     errNome.textContent = ""; errEnd.textContent = "";
     if (!nome) { errNome.textContent = "Informe seu nome."; f.nome.focus(); return; }
-    if (tipo === "entrega" && !endereco) { errEnd.textContent = "Informe o endereço de entrega."; f.endereco.focus(); return; }
+    if (tipo === "entrega") {
+      if (cep.length !== 8) { errEnd.textContent = "Informe o CEP com 8 números."; f.cep.focus(); return; }
+      if (!endereco) { errEnd.textContent = "Informe a rua ou avenida."; f.endereco.focus(); return; }
+      if (!numero) { errEnd.textContent = "Informe o número (ou escreva s/n)."; f.numero.focus(); return; }
+      if (!bairro) { errEnd.textContent = "Informe o bairro."; f.bairro.focus(); return; }
+      if (!cidade) { errEnd.textContent = "Informe a cidade."; f.cidade.focus(); return; }
+      endereco = endereco + ", " + numero + (compl ? " (" + compl + ")" : "") + " - " + bairro + ", " + cidade + (uf ? "/" + uf : "") + " - CEP " + cep.slice(0, 5) + "-" + cep.slice(5);
+    }
 
     var linhas = items.map(function (i) {
       return "• " + i.qtd + "x " + i.nome + " (" + i.detalhe + ") — " + P.brl(i.preco * i.qtd);

@@ -617,3 +617,19 @@ h1, h2, h3, h4, .brand-name { font-variant-numeric: lining-nums; font-feature-se
 .ilus-note { color: var(--muted); font-size: .85rem; margin: 18px 0 0; text-align: center; }
 .cat-note.ilus-note { margin-top: 4px; font-size: .85rem; }
 .wa-float, .wa-float:hover { text-decoration: none; }
+
+/* Endereço de entrega com busca por CEP */
+#cep { max-width: 220px; }
+.cep-status { margin: 8px 0 0; font-size: .9rem; min-height: 0; color: #cfc6ae; }
+.cep-status:empty { display: none; }
+.cep-status.ok { color: #9fe0b0; }
+.cep-status.warn { color: #ffd9a0; }
+.cep-status.busy { color: #cfc6ae; }
+.addr-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px 12px; margin-top: 18px; }
+.addr-grid label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 6px; color: #f7ecd5; }
+.addr-grid .opt-txt { font-weight: 400; opacity: .75; }
+.addr-rua { grid-column: span 4; } .addr-num { grid-column: span 2; }
+.addr-comp { grid-column: span 6; } .addr-bairro { grid-column: span 6; }
+.addr-cidade { grid-column: span 5; } .addr-uf { grid-column: span 1; }
+.addr-uf input { text-transform: uppercase; padding-left: 12px; padding-right: 8px; }
+@media (max-width: 480px) { .addr-rua, .addr-num { grid-column: span 6; } .addr-cidade { grid-column: span 4; } .addr-uf { grid-column: span 2; } #cep { max-width: none; } }
