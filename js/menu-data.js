@@ -55,7 +55,7 @@ window.PIPORIA_MENU = {
     /* ---------------- PIPOCAS ---------------- */
     {
       id: "lua", ilustrativa: true, categoria: "pipoca", nome: "Lua", subtitulo: "Leitinho",
-      imagem: "img/sabores/lua-v2.jpg",
+      imagem: "img/sabores/lua-v3.jpg",
       descricao: "Doce, suave e cremoso como a luz da lua.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#e7c98b", cor2: "#fff3d1", combinavel: true
