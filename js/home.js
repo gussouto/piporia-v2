@@ -1,4 +1,4 @@
-/* Home: sabores em destaque, galeria em movimento, sete planetas e faixa de informações */
+/* Home: sabores em destaque, galeria em movimento, seis planetas e faixa de informações */
 (function () {
   "use strict";
   var P = window.Piporia, M = window.PIPORIA_MENU, E = window.PiporiaEstoque;
@@ -52,7 +52,7 @@
     track.innerHTML = set(false) + set(true) + set(true) + set(true);
   }
 
-  /* Sete planetas */
+  /* Seis planetas */
   var fl = document.getElementById("flavors");
   function renderFlavors() {
     var curtas = {
@@ -60,7 +60,6 @@
       jupiter: "Intenso e cheio de camadas de sabor.",
       netuno: "Cookies crocantes com creme suave.",
       marte: "Creme de avelã e chocolate.",
-      urano: "Coco com chocolate branco.",
       plutao: "A crocância do Ovomaltine.",
       saturno: "Nutella cremosa e irresistível."
     };

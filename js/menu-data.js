@@ -77,13 +77,6 @@ window.PIPORIA_MENU = {
       cor: "#b5832f", cor2: "#e6b560", combinavel: true
     },
     {
-      id: "urano", categoria: "pipoca", nome: "Urano", subtitulo: "Rafaello",
-      imagem: "img/sabores/urano.jpg",
-      descricao: "A delicadeza do coco com chocolate branco que derrete na boca. Sofisticação em cada pedacinho.",
-      tamanhos: [{ nome: "500 ml", preco: null }, { nome: "1 L", preco: null }],
-      cor: "#efe3c8", cor2: "#ffffff", combinavel: true
-    },
-    {
       id: "plutao", categoria: "pipoca", nome: "Plutão", subtitulo: "Ovomaltine",
       imagem: "img/sabores/plutao.jpg",
       descricao: "A crocância inconfundível do Ovomaltine que transforma cada mordida em pura nostalgia e prazer.",

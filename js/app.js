@@ -66,7 +66,7 @@
     return '<svg class="ico stroke ' + (cls || "") + '" viewBox="0 0 24 24" aria-hidden="true">' + (S[name] || "") + "</svg>";
   }
   function flavorIcon(id) {
-    return icon({ jupiter: "jup", urano: "star" }[id] || "planet");
+    return icon({ jupiter: "jup" }[id] || "planet");
   }
   /* Substitui <span data-i="nome"></span> pelo ícone */
   function paintIcons(root) {

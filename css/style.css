@@ -254,12 +254,12 @@ em { font-style: italic; color: var(--gold); }
 .g-info .more { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; gap: 6px; padding-top: 12px; border-top: 1px solid rgba(246, 210, 122, .25); font-size: .85rem; font-weight: 500; color: var(--gold-2); }
 .g-info .more .ico { width: 14px; height: 14px; stroke-width: 2.4; }
 
-/* ---------- Home: sete planetas ---------- */
+/* ---------- Home: seis planetas ---------- */
 .planets { padding-top: clamp(40px, 5vw, 70px); padding-bottom: 0; }
 .planets .orn { margin-bottom: 10px; }
 .planets .sec-title { margin: 14px 0 14px; }
 .planets .sec-title em { color: var(--gold-text); }
-.flavors { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 18px; margin-top: 46px; }
+.flavors { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; margin-top: 46px; }
 .flavor { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: 18px; text-decoration: none; overflow: hidden; box-shadow: 0 6px 22px rgba(60, 40, 10, .07); }
 .flavor:hover { border-color: var(--gold); }
 .flavor .ph { aspect-ratio: 1 / .95; overflow: hidden; border-radius: 16px 16px 0 0; }
@@ -470,7 +470,7 @@ input::placeholder, textarea::placeholder { color: #8a8fa8; }
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 1200px) {
-  .flavors { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .flavors { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .pick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .why-grid { grid-template-columns: 1fr; }
   .why-art { margin-left: 0; margin-top: 10px; min-height: 0; height: 420px; order: 3; }

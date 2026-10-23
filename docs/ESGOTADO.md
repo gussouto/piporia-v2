@@ -8,7 +8,7 @@ e mostra "Esgotado" sozinho, em poucos minutos. Não precisa mexer no código.
 1. Entre em [Google Planilhas](https://sheets.google.com) e crie uma planilha nova.
 2. Menu **Arquivo > Importar > Fazer upload** e envie `docs/estoque-modelo.csv`.
    Escolha "Substituir planilha".
-3. Selecione a coluna **esgotado**, de D2 até D21 (sem o título), e use **Inserir > Caixa de seleção**.
+3. Selecione a coluna **esgotado**, de D2 até D19 (sem o título), e use **Inserir > Caixa de seleção**.
    Assim a Pipória só marca ou desmarca a caixinha.
 4. **Arquivo > Compartilhar > Publicar na Web**. Em "Link", escolha a aba e o formato
    **Valores separados por vírgula (.csv)** e clique em **Publicar**.
@@ -31,7 +31,7 @@ A atualização leva alguns minutos (o Google guarda uma cópia da planilha por 
 
 | coluna | o que é |
 |---|---|
-| id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, urano, plutao, saturno, acai-garrafa, panqueca). Não altere. |
+| id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, plutao, saturno, acai-garrafa, panqueca). Não altere. |
 | produto | só para a Pipória se achar. O site ignora. |
 | tamanho | 500 ml e 1 L nas pipocas; sabor no açaí e na panqueca. Não altere. |
 | esgotado | marcado (VERDADEIRO) ou desmarcado (FALSO). Também vale SIM/NAO. |
