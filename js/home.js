@@ -34,7 +34,8 @@
     { img: "img/galeria-2.jpg", alt: "Balde de pipoca coberto de chocolate ao leite", t: "Chocolate ao leite", s: "Pipocas Gourmet", d: "Balde cheio, com cobertura de chocolate ao leite.", href: "cardapio.html?cat=pipoca", ic: "bucket" },
     { img: "img/galeria-3.jpg", alt: "Pote de pipoca com creme e chocolate", t: "Creme e chocolate", s: "Pipocas Gourmet", d: "Camadas de creme e chocolate em cada pedaço.", href: "cardapio.html?cat=pipoca", ic: "star" },
     { img: "img/galeria-4.jpg", alt: "Açaí na garrafa Pipória", t: "Açaí na Garrafa", s: "Para levar", d: "Açaí cremoso na garrafa, em quatro sabores.", href: "cardapio.html?cat=acai", ic: "bottle" },
-    { img: "img/galeria-5.jpg", alt: "Panqueca da Pipória", t: "Panqueca", s: "Frango ou carne", d: "Panqueca recheada, nos sabores frango e carne.", href: "cardapio.html?cat=panqueca", ic: "pancake" }
+    { img: "img/galeria-5.jpg", alt: "Panqueca da Pipória", t: "Panqueca", s: "Frango ou carne", d: "Panqueca recheada, nos sabores frango e carne.", href: "cardapio.html?cat=panqueca", ic: "pancake" },
+    { img: "img/galeria-6.jpg", alt: "Balde de pipoca Pipória com ninho e creme de avelã", t: "Ninho e avelã", s: "Pipocas Gourmet", d: "Creme de ninho e creme de avelã sobre a pipoca.", href: "cardapio.html?cat=pipoca", ic: "bucket" }
   ];
   var track = document.getElementById("marquee-track");
   if (track) {
