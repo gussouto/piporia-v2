@@ -62,7 +62,7 @@ window.PIPORIA_MENU = {
     },
     {
       id: "jupiter", ilustrativa: true, categoria: "pipoca", nome: "Júpiter", subtitulo: "Creme de avelã",
-      imagem: "img/sabores/jupiter-v2.jpg",
+      imagem: "img/sabores/jupiter-v3.jpg",
       descricao: "Intenso, envolvente e cheio de camadas de sabor.",
       tamanhos: [{ nome: "500 ml", preco: 29 }, { nome: "1 L", preco: 43 }],
       cor: "#7a4a2a", cor2: "#c58a55", combinavel: true
