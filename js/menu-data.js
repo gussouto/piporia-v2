@@ -5,7 +5,7 @@
 
    Campos de cada item:
    - id          identificador único, sem espaços ou acentos
-   - categoria   "pipoca", "acai" ou "panqueca" (ou uma nova)
+   - categoria   "pipoca", "pipoca-seca", "acai" ou "panqueca" (ou uma nova)
    - nome        nome exibido
    - subtitulo   linha pequena acima da descrição (opcional)
    - descricao   texto do detalhe
@@ -38,6 +38,11 @@ window.PIPORIA_MENU = {
       id: "pipoca",
       nome: "Pipocas Gourmet",
       nota: "Clássicos. Você pode escolher até dois recheios por pipoca."
+    },
+    {
+      id: "pipoca-seca",
+      nome: "Pipoca Seca",
+      nota: "Crocante e fresquinha para provar."
     },
     {
       id: "acai",
