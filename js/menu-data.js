@@ -127,6 +127,14 @@ window.PIPORIA_MENU = {
       imagem: "img/seca-maracuja.jpg"
     },
 
+    {
+      id: "seca-limao", categoria: "seca-saborizada", nome: "Limão",
+      subtitulo: "Pipoca seca",
+      descricao: "Pipoca seca com cobertura de limão, crocante e fresquinha, em pacote para levar.",
+      tamanhos: [{ nome: "Pacote", preco: 15 }],
+      imagem: "img/seca-limao.jpg"
+    },
+
     /* ---------------- AÇAÍ NA GARRAFA ----------------
        R$ 25,00 em todos os sabores. */
     {

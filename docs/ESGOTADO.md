@@ -31,7 +31,7 @@ A atualização leva alguns minutos (o Google guarda uma cópia da planilha por 
 
 | coluna | o que é |
 |---|---|
-| id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, plutao, saturno, acai-morango, acai-ninho, acai-maracuja, acai-avela, panqueca-frango, panqueca-carne, seca-chocolate, seca-ninho, seca-maracuja). Não altere. |
+| id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, plutao, saturno, acai-morango, acai-ninho, acai-maracuja, acai-avela, panqueca-frango, panqueca-carne, seca-chocolate, seca-ninho, seca-maracuja, seca-limao). Não altere. |
 | produto | só para a Pipória se achar. O site ignora. |
 | tamanho | 500 ml e 1 L nas pipocas; Garrafa no açaí; Unidade na panqueca; Pacote na seca saborizada. Não altere. |
 | esgotado | marcado (VERDADEIRO) ou desmarcado (FALSO). Também vale SIM/NAO. |
