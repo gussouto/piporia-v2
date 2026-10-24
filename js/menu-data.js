@@ -119,6 +119,14 @@ window.PIPORIA_MENU = {
       imagem: "img/seca-ninho.jpg"
     },
 
+    {
+      id: "seca-maracuja", categoria: "seca-saborizada", nome: "Maracujá",
+      subtitulo: "Pipoca seca",
+      descricao: "Pipoca seca com cobertura de maracujá, crocante e fresquinha, em pacote para levar.",
+      tamanhos: [{ nome: "Pacote", preco: 15 }],
+      imagem: "img/seca-maracuja.jpg"
+    },
+
     /* ---------------- AÇAÍ NA GARRAFA ----------------
        R$ 25,00 em todos os sabores. */
     {
