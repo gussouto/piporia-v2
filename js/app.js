@@ -117,20 +117,41 @@
     });
   }
 
-  /* ---------- Aviso rápido ---------- */
-  var toastTimer;
-  function toast(msg, linkHref, linkText) {
-    var el = document.querySelector(".toast");
+  /* ---------- Barra do carrinho (fica visível enquanto houver itens) ---------- */
+  var flashTimer, flashMsg = "";
+  function cartBar() {
+    var el = document.querySelector(".cartbar");
     if (!el) {
-      el = document.createElement("div");
-      el.className = "toast";
-      el.setAttribute("role", "status");
+      el = document.createElement("a");
+      el.className = "cartbar";
+      el.href = "pedido.html";
+      el.setAttribute("aria-live", "polite");
+      el.innerHTML = '<span class="cb-ico">' + icon("bag") + '<b class="cb-n"></b></span>' +
+        '<span class="cb-txt"><strong class="cb-t1"></strong><small class="cb-t2"></small></span>' +
+        '<span class="cb-go">Ver carrinho' + icon("arrow") + "</span>";
       document.body.appendChild(el);
     }
-    el.innerHTML = "<span>" + esc(msg) + "</span>" + (linkHref ? '<a href="' + linkHref + '">' + esc(linkText) + "</a>" : "");
-    el.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.classList.remove("show"); }, 4200);
+    return el;
+  }
+  function updateBar() {
+    var n = cart.count();
+    var page = document.body.getAttribute("data-page");
+    var show = n > 0 && page !== "pedido";
+    var el = cartBar();
+    el.classList.toggle("show", show);
+    el.classList.toggle("flash", !!flashMsg);
+    document.body.classList.toggle("has-cartbar", show);
+    el.querySelector(".cb-n").textContent = n;
+    el.querySelector(".cb-t1").textContent = flashMsg || (n === 1 ? "1 item no carrinho" : n + " itens no carrinho");
+    el.querySelector(".cb-t2").textContent = "Total dos itens: " + brl(cart.total());
+    el.setAttribute("tabindex", show ? "0" : "-1");
+  }
+  /* Mensagem rápida de "adicionado": aparece na própria barra e depois volta ao resumo */
+  function toast(msg) {
+    flashMsg = msg;
+    updateBar();
+    clearTimeout(flashTimer);
+    flashTimer = setTimeout(function () { flashMsg = ""; updateBar(); }, 3200);
   }
 
   /* ---------- Cabeçalho ---------- */
@@ -205,9 +226,10 @@
         nt.setAttribute("aria-label", open ? "Fechar o menu" : "Abrir o menu");
       });
     }
-    window.addEventListener("cart:change", updateBadge);
-    window.addEventListener("storage", updateBadge);
+    window.addEventListener("cart:change", function () { updateBadge(); updateBar(); });
+    window.addEventListener("storage", function () { updateBadge(); updateBar(); });
     updateBadge();
+    updateBar();
   }
 
   renderHeader();

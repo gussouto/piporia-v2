@@ -218,7 +218,7 @@
         qtd: st.qty
       });
       dlg.close();
-      P.toast(st.qty + "x " + nome + " no carrinho.", "pedido.html", "Ver carrinho");
+      P.toast(st.qty + "x " + nome + " adicionado");
     });
 
     refresh();
