@@ -171,7 +171,7 @@
       '<div class="has-sub"><a href="cardapio.html"' + cur("cardapio") + ">Cardápio " + icon("chevd") + "</a>" +
       '<div class="sub"><div class="sub-in">' +
       '<a href="cardapio.html?cat=pipoca">Pipocas Gourmet</a>' +
-      '<a href="cardapio.html?cat=pipoca-seca">Pipoca Seca</a>' +
+      '<a href="cardapio.html?cat=seca-saborizada">Seca Saborizada</a>' +
       '<a href="cardapio.html?cat=acai">Açaí na Garrafa</a>' +
       '<a href="cardapio.html?cat=panqueca">Panqueca</a>' +
       "</div></div></div>" +

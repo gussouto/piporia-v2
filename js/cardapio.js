@@ -19,7 +19,7 @@
     var list = [{ id: "todos", nome: "Tudo" }].concat(M.categorias.filter(function (c) {
       return M.itens.some(function (i) { return i.categoria === c.id; });
     }));
-    var ic = { pipoca: "bucket", "pipoca-seca": "bucket", acai: "bottle", panqueca: "pancake" };
+    var ic = { pipoca: "bucket", "seca-saborizada": "bucket", acai: "bottle", panqueca: "pancake" };
     chips.innerHTML = list.map(function (c) {
       return '<button type="button" class="chip" data-cat="' + c.id + '" aria-pressed="' + (c.id === current) + '">' +
         (ic[c.id] ? P.icon(ic[c.id]) : "") + P.esc(c.nome) + "</button>";
@@ -59,9 +59,9 @@
       '<div class="m-foot">' + price + '<span class="m-add' + (out ? ' is-off' : '') + '">' + (out ? "Esgotado" : P.icon("plus") + (min == null ? "Perguntar" : "Adicionar")) + "</span></div></div></div>";
   }
   var BANNER = {
-    todos: ["Nosso cardápio", "Pipocas, pipoca seca, açaí e panqueca. Escolha o seu favorito.", "Nosso <em>cardápio</em>"],
+    todos: ["Nosso cardápio", "Pipocas, seca saborizada, açaí e panqueca. Escolha o seu favorito.", "Nosso <em>cardápio</em>"],
     pipoca: ["Nosso cardápio", "Milho mushroom importado, caramelizado e servido no balde. Escolha o seu favorito.", "Pipocas <em>Gourmet</em>"],
-    "pipoca-seca": ["Nosso cardápio", "Crocante e fresquinha para provar.", "Pipoca <em>Seca</em>"],
+    "seca-saborizada": ["Nosso cardápio", "Crocante e fresquinha para provar.", "Seca <em>Saborizada</em>"],
     acai: ["Nosso cardápio", "Para levar e tomar onde quiser, em quatro sabores. Chame a gente para saber o valor.", "Açaí na <em>Garrafa</em>"],
     panqueca: ["Nosso cardápio", "Panqueca recheada, nos sabores frango e carne.", "<em>Panqueca</em>"]
   };
