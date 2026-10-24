@@ -106,7 +106,7 @@ window.PIPORIA_MENU = {
     {
       id: "seca-chocolate", categoria: "seca-saborizada", nome: "Chocolate",
       subtitulo: "Pipoca seca",
-      descricao: "Pipoca seca coberta de chocolate, crocante e fresquinha, em pacote para levar.",
+      descricao: "Pipoca seca coberta de chocolate, crocante e fresquinha, em pacote.",
       tamanhos: [{ nome: "Pacote", preco: 15 }],
       imagem: "img/seca-chocolate.jpg"
     },
@@ -114,7 +114,7 @@ window.PIPORIA_MENU = {
     {
       id: "seca-ninho", categoria: "seca-saborizada", nome: "Ninho",
       subtitulo: "Pipoca seca",
-      descricao: "Pipoca seca coberta de leite ninho, crocante e fresquinha, em pacote para levar.",
+      descricao: "Pipoca seca coberta de leite ninho, crocante e fresquinha, em pacote.",
       tamanhos: [{ nome: "Pacote", preco: 15 }],
       imagem: "img/seca-ninho.jpg"
     },
@@ -122,7 +122,7 @@ window.PIPORIA_MENU = {
     {
       id: "seca-maracuja", categoria: "seca-saborizada", nome: "Maracujá",
       subtitulo: "Pipoca seca",
-      descricao: "Pipoca seca com cobertura de maracujá, crocante e fresquinha, em pacote para levar.",
+      descricao: "Pipoca seca coberta de maracujá, crocante e fresquinha, em pacote.",
       tamanhos: [{ nome: "Pacote", preco: 15 }],
       imagem: "img/seca-maracuja.jpg"
     },
@@ -130,7 +130,7 @@ window.PIPORIA_MENU = {
     {
       id: "seca-limao", categoria: "seca-saborizada", nome: "Limão",
       subtitulo: "Pipoca seca",
-      descricao: "Pipoca seca com cobertura de limão, crocante e fresquinha, em pacote para levar.",
+      descricao: "Pipoca seca coberta de limão, crocante e fresquinha, em pacote.",
       tamanhos: [{ nome: "Pacote", preco: 15 }],
       imagem: "img/seca-limao.jpg"
     },
