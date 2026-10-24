@@ -102,6 +102,15 @@ window.PIPORIA_MENU = {
       cor: "#5a3520", cor2: "#9a6a42", combinavel: true
     },
 
+    /* ---------------- SECA SABORIZADA ---------------- */
+    {
+      id: "seca-chocolate", categoria: "seca-saborizada", nome: "Chocolate",
+      subtitulo: "Pipoca seca",
+      descricao: "Pipoca seca coberta de chocolate, crocante e fresquinha, em pacote para levar.",
+      tamanhos: [{ nome: "Pacote", preco: 15 }],
+      imagem: "img/seca-chocolate.jpg"
+    },
+
     /* ---------------- AÇAÍ NA GARRAFA ----------------
        R$ 25,00 em todos os sabores. */
     {

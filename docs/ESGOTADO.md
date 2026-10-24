@@ -22,7 +22,7 @@ e mostra "Esgotado" sozinho, em poucos minutos. Não precisa mexer no código.
 - Desmarcou: volta ao normal.
 - Coluna **aviso** (opcional): texto que aparece para o cliente, por exemplo "Volta amanhã".
 - As pipocas têm **uma linha por tamanho** (500 ml e 1 L). O açaí e a panqueca têm **uma linha
-  por sabor** (por exemplo, "Açaí na Garrafa - Maracujá"). Marque só a linha do que acabou. Se todos os tamanhos do produto estiverem marcados, o produto
+  por sabor** (por exemplo, "Açaí na Garrafa - Maracujá"). A seca saborizada tem **uma linha por sabor** ("Seca Saborizada - Chocolate"). Marque só a linha do que acabou. Se todos os tamanhos do produto estiverem marcados, o produto
   inteiro aparece como Esgotado.
 
 A atualização leva alguns minutos (o Google guarda uma cópia da planilha por um tempo).
@@ -31,9 +31,9 @@ A atualização leva alguns minutos (o Google guarda uma cópia da planilha por 
 
 | coluna | o que é |
 |---|---|
-| id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, plutao, saturno, acai-morango, acai-ninho, acai-maracuja, acai-avela, panqueca-frango, panqueca-carne). Não altere. |
+| id | identificador do produto, igual ao de `menu-data.js` (lua, jupiter, netuno, marte, plutao, saturno, acai-morango, acai-ninho, acai-maracuja, acai-avela, panqueca-frango, panqueca-carne, seca-chocolate). Não altere. |
 | produto | só para a Pipória se achar. O site ignora. |
-| tamanho | 500 ml e 1 L nas pipocas; Garrafa no açaí; Unidade na panqueca. Não altere. |
+| tamanho | 500 ml e 1 L nas pipocas; Garrafa no açaí; Unidade na panqueca; Pacote na seca saborizada. Não altere. |
 | esgotado | marcado (VERDADEIRO) ou desmarcado (FALSO). Também vale SIM/NAO. |
 | aviso | opcional, mensagem para o cliente |
 
@@ -56,3 +56,6 @@ ainda tem a palavra final.
 A planilha publicada é pública (qualquer pessoa com o link vê as colunas acima). Não
 coloque nela nada além de estoque. Quem pode **editar** é só quem receber acesso de
 editor no Google.
+
+## Novo produto da Seca Saborizada
+Ao incluir um sabor novo no site, adicione na planilha uma linha com o id do produto (por exemplo `seca-morango`), o nome em **produto** e **Pacote** em **tamanho**. Sem a linha, o produto aparece normalmente e só não dá para marcá-lo como esgotado.
