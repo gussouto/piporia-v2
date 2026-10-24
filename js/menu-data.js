@@ -111,6 +111,14 @@ window.PIPORIA_MENU = {
       imagem: "img/seca-chocolate.jpg"
     },
 
+    {
+      id: "seca-ninho", categoria: "seca-saborizada", nome: "Ninho",
+      subtitulo: "Pipoca seca",
+      descricao: "Pipoca seca coberta de leite ninho, crocante e fresquinha, em pacote para levar.",
+      tamanhos: [{ nome: "Pacote", preco: 15 }],
+      imagem: "img/seca-ninho.jpg"
+    },
+
     /* ---------------- AÇAÍ NA GARRAFA ----------------
        R$ 25,00 em todos os sabores. */
     {
